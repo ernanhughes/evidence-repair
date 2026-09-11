@@ -51,6 +51,8 @@ To run the DSPy planner path, install the optional DSPy extra:
 python -m pip install -e ".[dev,dspy]"
 ```
 
+Local verification used Python 3.13 for the deterministic path and Python 3.11 for the live DSPy/Ollama path. If a Python 3.13 environment has a broken NumPy wheel, use a Python 3.11 or 3.12 virtual environment for DSPy runs.
+
 ## Run the deterministic path
 
 ```powershell
