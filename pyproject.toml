@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evidence-repair"
+version = "0.1.0"
+description = "A DSPy-oriented repository repair loop with explicit evidence, validation, and promotion boundaries."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Ernan Hughes" }]
+keywords = [
+  "dspy",
+  "repository-repair",
+  "llm-evaluation",
+  "program-repair",
+  "evidence",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+dspy = ["dspy>=3.3,<4"]
+
+[project.scripts]
+evidence-repair = "evidence_repair.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ernanhughes/evidence-repair"
+Repository = "https://github.com/ernanhughes/evidence-repair"
+Book = "https://programmer.ie/books/dspy-from-first-principles/"
+Chapter = "https://programmer.ie/books/dspy-from-first-principles/20-chapter/"
+Solution = "https://programmer.ie/solutions/self-improving-engineering-program/"
+Original-Experiment = "https://github.com/ernanhughes/next-books/tree/main/experiments/dspy-from-first-principles"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

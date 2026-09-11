@@ -206,6 +206,9 @@ tempCodeRunnerFile.py
 # Ruff stuff:
 .ruff_cache/
 
+# Evidence Repair run output
+.artifacts/
+
 # PyPI configuration file
 .pypirc
 
