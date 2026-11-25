@@ -45,3 +45,6 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+addopts = "-p aitest.pytest_plugin"
+aitest_enabled = true
+aitest_policy = "standard"
